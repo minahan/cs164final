@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+        <script src="createViz.js"></script>
+        <style>
+
+            body {
+              font: 10px sans-serif;
+            }
+
+            .arc path {
+              stroke: #fff;
+            }
+
+        </style>
+        <script>
+        	$(document).ready(function() {
+        		createViz(
+              {
+                  "type": "scatterplot",
+                  "color":"blue",
+                  "data": [
+                   {"name": "Kai", "age": 30, "height": 64, "animal": "dog"},
+                   {"name": "Felix", "age": 22, "height": 63, "animal": "cat"},
+                   {"name": "Brian", "age": 20, "height": 60, "animal": "cat"},
+                   {"name": "Andy", "age": 25, "height": 65, "animal": "bird"},
+                   {"name": "Justin", "age": 36, "height": 68, "animal": "bird"},
+                   {"name": "Ashley", "age": 34, "height": 66, "animal": "cat"},
+                   {"name": "Karina", "age": 28, "height": 65, "animal": "dog"},
+                  {"name": "Mary", "age": 25, "height": 72, "animal": "cat"}, 
+                  {"name": "John", "age": 22, "height": 61, "animal": "dog"}],
+                  "xAxis": "age",
+                  "yAxis": "height",
+                  "filterOn": "animal"
+              });
+
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>Pets</h1>
+    </body>
+</html>
